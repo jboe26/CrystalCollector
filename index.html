@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Crystal Collector</title>
 </head>
 
@@ -39,27 +41,27 @@
         <div class="row">
             <div class="col-md-1">
             </div>
-            <div class="numberToGuess"></div>
-            <div class="winslosses">Wins: <br> Losses: <br></div>
+            <div class="numberToGuess"><p id="goal">0</p>
+            </div>
+            <div class="winslosses">Wins: <p id="wins">0</p><br> Losses: <p id="losses">0</p><br></div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                    <button class="crystal1"><img src="assets/images/ruby.jfif" height="75"></button>
-                    <button class="crystal2"><img src="assets/images/diamond.gif" height="75"></button>
-                    <button class="crystal3"><img src="assets/images/yellow.jfif" height="75"></button>
-                    <button class="crystal4"><img src="assets/images/green.jfif" height="75"></button>
+                <button class="crystal1"><img src="assets/images/ruby.jfif" height="75"></button>
+                <button class="crystal2"><img src="assets/images/diamond.gif" height="75"></button>
+                <button class="crystal3"><img src="assets/images/yellow.jfif" height="75"></button>
+                <button class="crystal4"><img src="assets/images/green.jfif" height="75"></button>
             </div>
-            
-           
+
+
         </div>
         <div class="row">
             <div class="col-md-12">
             </div>
-            <div class="totalScore">Your total score is: <p id="totalScore">0</p></div>
+            <div class="totalScore">Your total score is: <p id="totalScore">0</p>
+            </div>
         </div>
         <script src="assets/javascript/game.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     </div>
 </body>
 
