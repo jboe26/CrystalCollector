@@ -1,0 +1,37 @@
+body {
+    background-color: lightblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+    background-color: orange;
+    color: #fff;
+    align-content: left;
+    text-align: center;
+    margin: auto;
+    width: 350px;
+}
+
+.instructions {
+    background-color: tan;
+    color: green;
+    align-content: left;
+    margin: auto;
+    width: 350px;
+}
+
+.numberToGuess {
+    background-color: green;
+    color: #000;
+    height: 100px;
+    width: 150px;
+    align-content: left;
+}
+
+.winslosses {
+    background-color: cyan;
+    color: #000;
+    height: 100px;
+    width: 150px;
+}
+
