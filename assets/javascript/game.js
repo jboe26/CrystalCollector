@@ -1,20 +1,20 @@
-$( document ).ready(function() {
-    
-var wins = 0;
-var losses = 0;
-var totalScore = 0;
+$(document).ready(function () {
 
-var rubyValue = (Math.floor(Math.random() * 11) + 1);
-var diamondValue = (Math.floor(Math.random() * 11) + 1);
-var yellowValue = (Math.floor(Math.random() * 11) + 1);
-var greenValue = (Math.floor(Math.random() * 11) + 1);
-var currentGoal = (Math.floor(Math.random() * 101) + 19);
-$("#goal").html(currentGoal);
-$("#totalScore").html(totalScore);
+    var wins = 0;
+    var losses = 0;
+    var totalScore = 0;
 
-console.log(currentGoal);
-function reset () {
-}
+    var rubyValue = (Math.floor(Math.random() * 11) + 1);
+    var diamondValue = (Math.floor(Math.random() * 11) + 1);
+    var yellowValue = (Math.floor(Math.random() * 11) + 1);
+    var greenValue = (Math.floor(Math.random() * 11) + 1);
+    var currentGoal = (Math.floor(Math.random() * 101) + 19);
+    $("#goal").html(currentGoal);
+    $("#totalScore").html(totalScore);
+
+    console.log(currentGoal);
+    function reset() {
+    }
     reset();
 
     rubyValue = (Math.floor(Math.random() * 11) + 1);
@@ -25,20 +25,21 @@ function reset () {
     $("#goal").html(currentGoal);
     $("#totalScore").html(totalScore);
 
+
     $(".crystal1").click()
-        totalScore = totalScore + rubyValue
-        $('#totalScore').text(totalScore);
-        if (totalScore === currentGoal) {
-            wins++
-            reset();
-        } else if (totalScore > currentGoal) {
-            losses++
-            reset();
-        }
+    totalScore = totalScore + rubyValue
+    $('#totalScore').text(totalScore);
+    if (totalScore === currentGoal) {
+        wins++
+        reset();
+    } else if (totalScore > currentGoal) {
+        losses++
+        reset();
+    }
 });
 
 $(".crystal2").click()
-totalScore = totalScore + diamondValue
+totalScore = totalScore +  diamondValue
 $('#totalScore').text(totalScore);
 if (totalScore === currentGoal) {
     wins++
@@ -70,7 +71,7 @@ if (totalScore === currentGoal) {
     reset();
 }
 
-function win(){
+function win() {
     wins++;
     $("#wins").text(wins);
 
@@ -78,7 +79,7 @@ function win(){
 }
 
 
-function win(){
+function losses() {
     losses++;
     $("#losses").text(losses);
 
