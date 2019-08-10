@@ -45,7 +45,8 @@ if (totalScore === currentGoal) {
 } if (totalScore > currentGoal) {
     losses++
     $("#losses").text(losses);
-    reset();
+    $(".winorlose").html("You Lose!");
+    reset(); 
 }
 });
 
@@ -60,6 +61,7 @@ if (totalScore === currentGoal) {
 } if (totalScore > currentGoal) {
     losses++
     $("#losses").text(losses);
+    $(".winorlose").html("You Lose!");
     reset();
 }
 });
@@ -75,6 +77,7 @@ if (totalScore === currentGoal) {
 } if (totalScore > currentGoal) {
     losses++
     $("#losses").text(losses);
+    $(".winorlose").html("You Lose!");
     reset();
 }
 });
@@ -90,6 +93,7 @@ if (totalScore === currentGoal) {
 } if (totalScore > currentGoal) {
     losses++
     $("#losses").text(losses);
+    $(".winorlose").html("You Lose!");
     reset();
 }
 });
