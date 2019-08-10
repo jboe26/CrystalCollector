@@ -10,79 +10,88 @@ $(document).ready(function () {
     var yellowValue = (Math.floor(Math.random() * 11) + 1);
     var greenValue = (Math.floor(Math.random() * 11) + 1);
     var currentGoal = (Math.floor(Math.random() * 101) + 19);
+    
     $("#goal").html(currentGoal);
     $("#totalScore").html(totalScore);
 
     console.log(currentGoal);
     function reset() {
+        rubyValue = (Math.floor(Math.random() * 11) + 1);
+        diamondValue = (Math.floor(Math.random() * 11) + 1);
+        yellowValue = (Math.floor(Math.random() * 11) + 1);
+        greenValue = (Math.floor(Math.random() * 11) + 1);
+        currentGoal = (Math.floor(Math.random() * 101) + 19);
+        $("#goal").html(currentGoal);
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        
+
     }
+
+    console.log(rubyValue)
+    console.log(diamondValue)
+    console.log(yellowValue)
+    console.log(greenValue)
+
+
+$(".crystal1").on("click", function(ev) {
+totalScore = totalScore + rubyValue
+$('#totalScore').text(totalScore);
+if (totalScore === currentGoal) {
+    wins++
+    $("#wins").text(wins);
+    $(".winorlose").html("You Won!");
     reset();
-
-    rubyValue = (Math.floor(Math.random() * 11) + 1);
-    diamondValue = (Math.floor(Math.random() * 11) + 1);
-    yellowValue = (Math.floor(Math.random() * 11) + 1);
-    greenValue = (Math.floor(Math.random() * 11) + 1);
-    currentGoal = (Math.floor(Math.random() * 101) + 19);
-    $("#goal").html(currentGoal);
-    $("#totalScore").html(totalScore);
-
+} if (totalScore > currentGoal) {
+    losses++
+    $("#losses").text(losses);
+    reset();
+}
 });
 
-$(".crystal1").click() 
-totalScore = totalScore + rubyValue
-$('#totalScore').text(rubyValue);
-if (totalScore === currentGoal) {
-    wins++
-    reset();
-} else if (totalScore > currentGoal) {
-    losses++
-    reset();
-}
-
-$(".crystal2").click()
+$(".crystal2").on("click", function(ev) {
 totalScore = totalScore + diamondValue
-$('#totalScore').text(diamondValue);
+$('#totalScore').text(totalScore);
 if (totalScore === currentGoal) {
     wins++
-    reset();
-} else if (totalScore > currentGoal) {
-    losses++
-    reset();
-}
-
-$(".crystal3").click()
-totalScore = totalScore + yellowValue
-$('#totalScore').text(yellowValue);
-if (totalScore === currentGoal) {
-    wins++
-    reset();
-} else if (totalScore > currentGoal) {
-    losses++
-    reset();
-}
-
-$(".crystal4").click()
-totalScore = totalScore + greenValue
-$('#totalScore').text(greenValue);
-if (totalScore === currentGoal) {
-    wins++
-    reset();
-} else if (totalScore > currentGoal) {
-    losses++
-    reset();
-}
-
-function win() {
-    wins++;
     $("#wins").text(wins);
-
+    $(".winorlose").html("You Won!");
     reset();
-}
-
-
-function losses() {
-    losses++;
+} if (totalScore > currentGoal) {
+    losses++
     $("#losses").text(losses);
-
     reset();
 }
+});
+
+$(".crystal3").on("click", function(ev) {
+totalScore = totalScore + yellowValue
+$('#totalScore').text(totalScore);
+if (totalScore === currentGoal) {
+    wins++
+    $("#wins").text(wins);
+    $(".winorlose").html("You Won!");
+    reset();
+} if (totalScore > currentGoal) {
+    losses++
+    $("#losses").text(losses);
+    reset();
+}
+});
+
+$(".crystal4").on("click", function(ev) {
+totalScore = totalScore + greenValue
+$('#totalScore').text(totalScore);
+if (totalScore === currentGoal) {
+    wins++
+    $("#wins").text(wins);
+    $(".winorlose").html("You Won!");
+    reset();
+} if (totalScore > currentGoal) {
+    losses++
+    $("#losses").text(losses);
+    reset();
+}
+});
+
+});
