@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
     var wins = 0;
@@ -25,22 +26,22 @@ $(document).ready(function () {
     $("#goal").html(currentGoal);
     $("#totalScore").html(totalScore);
 
-
-    $(".crystal1").click()
-    totalScore = totalScore + rubyValue
-    $('#totalScore').text(totalScore);
-    if (totalScore === currentGoal) {
-        wins++
-        reset();
-    } else if (totalScore > currentGoal) {
-        losses++
-        reset();
-    }
 });
 
+$(".crystal1").click() 
+totalScore = totalScore + rubyValue
+$('#totalScore').text(rubyValue);
+if (totalScore === currentGoal) {
+    wins++
+    reset();
+} else if (totalScore > currentGoal) {
+    losses++
+    reset();
+}
+
 $(".crystal2").click()
-totalScore = totalScore +  diamondValue
-$('#totalScore').text(totalScore);
+totalScore = totalScore + diamondValue
+$('#totalScore').text(diamondValue);
 if (totalScore === currentGoal) {
     wins++
     reset();
@@ -51,7 +52,7 @@ if (totalScore === currentGoal) {
 
 $(".crystal3").click()
 totalScore = totalScore + yellowValue
-$('#totalScore').text(totalScore);
+$('#totalScore').text(yellowValue);
 if (totalScore === currentGoal) {
     wins++
     reset();
@@ -62,7 +63,7 @@ if (totalScore === currentGoal) {
 
 $(".crystal4").click()
 totalScore = totalScore + greenValue
-$('#totalScore').text(totalScore);
+$('#totalScore').text(greenValue);
 if (totalScore === currentGoal) {
     wins++
     reset();
